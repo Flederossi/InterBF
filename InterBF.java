@@ -11,9 +11,6 @@ public class InterBF {
 
         Scanner scn = new Scanner(System.in);
 
-        int cOpen = 0;
-        int cClose = 0;
-
         while (progCount < prog.length()){
             switch (String.valueOf(prog.charAt(progCount))){
                 case ">":
@@ -48,7 +45,7 @@ public class InterBF {
                     break;
                 case "[":
                     if (mem[pointer] == 0){
-                        cOpen = 0;
+                        int cOpen = 0;
                         progCount++;
                         while (progCount < prog.length()){
                             String val = String.valueOf(prog.charAt(progCount));
@@ -65,7 +62,7 @@ public class InterBF {
                     break;
                 case "]":
                     if (mem[pointer] != 0){
-                        cClose = 0;
+                        int cClose = 0;
                         progCount--;
                         while (progCount >= 0){
                             String val = String.valueOf(prog.charAt(progCount));
